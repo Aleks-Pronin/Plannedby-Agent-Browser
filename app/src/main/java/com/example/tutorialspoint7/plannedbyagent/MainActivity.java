@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         webView = findViewById(R.id.webView);
         webView.setWebViewClient(new MyWebViewClient());
         webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl("http://plannedby.hz.cz/?reg");
+        webView.loadUrl("http://plannedby.hz.cz/");
     }
 
     private WebView webView;
