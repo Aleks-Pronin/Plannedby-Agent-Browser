@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         else{
             webView.loadUrl("https://plannedby.hz.cz/?reg");
             editor.putInt("registered", 1);editor.apply();
-            Toast.makeText(getApplicationContext(),"First RUN",Toast.LENGTH_LONG).show();}
+            Toast.makeText(getApplicationContext(),getString(R.string.first),Toast.LENGTH_LONG).show();}
     }
 
     private class MyWebViewClient extends WebViewClient {
