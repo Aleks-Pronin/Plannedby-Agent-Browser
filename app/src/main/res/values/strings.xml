@@ -1,3 +1,3 @@
 <resources>
-    <string name="app_name">Plannedby Agent</string>
+    <string name="app_name" translatable="false">Plannedby Agent 1.5</string>
 </resources>

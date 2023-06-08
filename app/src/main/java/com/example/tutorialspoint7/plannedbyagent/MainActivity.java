@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -22,9 +23,13 @@ public class MainActivity extends AppCompatActivity {
         webView.getSettings().setJavaScriptEnabled(true);
         SharedPreferences prefs = getSharedPreferences("MY_PREFS_NAME", MODE_PRIVATE);
         if(prefs.getInt("registered", 0)>0){
-        webView.loadUrl("https://plannedby.hz.cz/?reg");
-        editor.putInt("scoreViewA", 1);}
-        else{webView.loadUrl("https://plannedby.hz.cz/");}
+            webView.loadUrl("https://plannedby.hz.cz/");
+            editor.putInt("registered", 1);editor.commit();
+            Toast.makeText(getApplicationContext(),"Hello",Toast.LENGTH_LONG).show();}
+        else{
+            webView.loadUrl("https://plannedby.hz.cz/?reg");
+            editor.putInt("registered", 1);editor.commit();
+            Toast.makeText(getApplicationContext(),"First RUN",Toast.LENGTH_LONG).show();}
     }
 
     private WebView webView;
